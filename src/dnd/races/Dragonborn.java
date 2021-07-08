@@ -11,9 +11,9 @@ public class Dragonborn extends BaseRace{
     private String racialBonus[] = {"Draconic Ancestry", "Breath Weapon", "Damage Resistance"};
     private String[] subRacialBonus ={""};
 
-    public Dragonborn(String name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+    public Dragonborn(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
         //+2 strength and + 1 Charisma from racial stat bonus
-        super(name, strength + 2, dexterity, constitution, intelligence, wisdom, charisma + 1);
+        super( strength + 2, dexterity, constitution, intelligence, wisdom, charisma + 1);
     }
 
     @Override
@@ -47,7 +47,7 @@ public class Dragonborn extends BaseRace{
 
     public ArrayList<String> getAllAttributes(){
         ArrayList<String> attributes = new ArrayList<String>();
-        attributes.add(getName());
+
         attributes.add(getRace());
         attributes.add(String.valueOf(getStrength()));
         attributes.add(String.valueOf(getDexterity()));

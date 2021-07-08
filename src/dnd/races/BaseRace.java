@@ -3,7 +3,7 @@ package dnd.races;
 import java.util.List;
 
 public abstract class BaseRace implements Race {
-    private String name;
+
     private int strength;
     private int dexterity;
     private int constitution;
@@ -15,8 +15,8 @@ public abstract class BaseRace implements Race {
 
     }
 
-    public BaseRace(String name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
-        this.name = name;
+    public BaseRace(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+
         this.strength = strength;
         this.dexterity = dexterity;
         this.constitution = constitution;
@@ -25,10 +25,7 @@ public abstract class BaseRace implements Race {
         this.charisma = charisma;
     }
 
-    @Override
-    public String getName() {
-        return this.name;
-    }
+
 
     @Override
     public String getRace(){

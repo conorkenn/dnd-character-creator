@@ -4,9 +4,9 @@ public class DarkElf extends Elf{
 
     private String[] racialBonus = {"Superior Darkvision", "Sunlight Sensitivity", "Drow Magic", "Drow Weapon Training"};
 
-    public DarkElf(String name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+    public DarkElf(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
         //+1 charisma from racial stat bonus
-        super(name, strength, dexterity, constitution, intelligence, wisdom, charisma + 1);
+        super( strength, dexterity, constitution, intelligence, wisdom, charisma + 1);
     }
 
     @Override

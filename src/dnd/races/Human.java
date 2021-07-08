@@ -10,9 +10,9 @@ public class Human extends BaseRace{
     private String racialBonus[] = {""};
     private String[] subRacialBonus ={""};
 
-    public Human(String name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+    public Human( int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
         //+1 to each stat from racial bonus
-        super(name, strength + 1, dexterity + 1, constitution + 1, intelligence + 1, wisdom + 1, charisma + 1);
+        super( strength + 1, dexterity + 1, constitution + 1, intelligence + 1, wisdom + 1, charisma + 1);
     }
 
     @Override
@@ -46,7 +46,6 @@ public class Human extends BaseRace{
 
     public ArrayList<String> getAllAttributes(){
         ArrayList<String> attributes = new ArrayList<String>();
-        attributes.add(getName());
         attributes.add(getRace());
         attributes.add(String.valueOf(getStrength()));
         attributes.add(String.valueOf(getDexterity()));

@@ -11,9 +11,9 @@ public class HalfOrc extends BaseRace{
     private String racialBonus[] = {"Darkvision", "Menacing", "Relentless Endurance", "Savage Attacks"};
     private String[] subRacialBonus ={""};
 
-    public HalfOrc(String name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+    public HalfOrc( int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
         //+2 strength and +1 constitution from racial stat bonus
-        super(name, strength + 2, dexterity, constitution + 1, intelligence, wisdom, charisma);
+        super( strength + 2, dexterity, constitution + 1, intelligence, wisdom, charisma);
     }
 
     @Override
@@ -47,7 +47,6 @@ public class HalfOrc extends BaseRace{
 
     public ArrayList<String> getAllAttributes(){
         ArrayList<String> attributes = new ArrayList<String>();
-        attributes.add(getName());
         attributes.add(getRace());
         attributes.add(String.valueOf(getStrength()));
         attributes.add(String.valueOf(getDexterity()));

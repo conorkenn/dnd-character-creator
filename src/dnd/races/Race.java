@@ -4,7 +4,6 @@ import java.util.List;
 
 public interface Race {
 
-    public String getName();
 
     public String getRace();
 

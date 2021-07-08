@@ -11,9 +11,9 @@ public class Elf extends BaseRace{
     private String racialBonus[] = {"Darkvision", "Keen Senses", "Fey Ancestry", "Trance"};
     private String[] subRacialBonus ={""};
 
-    public Elf(String name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+    public Elf(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
         //+2 to dexterity from racial stat bonus
-        super(name, strength, dexterity + 2, constitution, intelligence, wisdom, charisma);
+        super( strength, dexterity + 2, constitution, intelligence, wisdom, charisma);
     }
 
     @Override
@@ -47,7 +47,6 @@ public class Elf extends BaseRace{
 
     public ArrayList<String> getAllAttributes(){
         ArrayList<String> attributes = new ArrayList<String>();
-        attributes.add(getName());
         attributes.add(getRace());
         attributes.add(String.valueOf(getStrength()));
         attributes.add(String.valueOf(getDexterity()));

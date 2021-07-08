@@ -11,9 +11,9 @@ public class Gnome extends BaseRace{
     private String racialBonus[] = {"Darkvision", "Gnome Cunning"};
     private String[] subRacialBonus ={""};
 
-    public Gnome(String name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+    public Gnome( int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
         //+2 intelligence from racial stat bonus
-        super(name, strength, dexterity, constitution, intelligence + 2, wisdom, charisma);
+        super( strength, dexterity, constitution, intelligence + 2, wisdom, charisma);
     }
 
     @Override
@@ -47,7 +47,6 @@ public class Gnome extends BaseRace{
 
     public ArrayList<String> getAllAttributes(){
         ArrayList<String> attributes = new ArrayList<String>();
-        attributes.add(getName());
         attributes.add(getRace());
         attributes.add(String.valueOf(getStrength()));
         attributes.add(String.valueOf(getDexterity()));

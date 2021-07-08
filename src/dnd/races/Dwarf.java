@@ -12,9 +12,9 @@ public class Dwarf extends BaseRace{
                                     "Dwarven Combat Training", "Tool Proficiency", "Stonecunning"};
     private String[] subRacialBonus ={""};
 
-    public Dwarf(String name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+    public Dwarf( int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
         //+2 to const from racial stat bonus
-        super(name, strength, dexterity, constitution + 2, intelligence, wisdom, charisma);
+        super(strength, dexterity, constitution + 2, intelligence, wisdom, charisma);
     }
 
     @Override
@@ -48,7 +48,6 @@ public class Dwarf extends BaseRace{
 
     public ArrayList<String> getAllAttributes(){
         ArrayList<String> attributes = new ArrayList<String>();
-        attributes.add(getName());
         attributes.add(getRace());
         attributes.add(String.valueOf(getStrength()));
         attributes.add(String.valueOf(getDexterity()));

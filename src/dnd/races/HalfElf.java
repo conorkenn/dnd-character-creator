@@ -11,9 +11,9 @@ public class HalfElf extends BaseRace {
     private String racialBonus[] = {"Darkvision", "Fey Ancestry", "Skill Versatility"};
     private String[] subRacialBonus ={""};
 
-    public HalfElf(String name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+    public HalfElf(int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
         //+2 Charisma from racial stat bonus
-        super(name, strength, dexterity, constitution, intelligence, wisdom, charisma + 2);
+        super( strength, dexterity, constitution, intelligence, wisdom, charisma + 2);
     }
 
     //TODO need two other ability scores of user choice to be increased by 1, not Charisma
@@ -51,7 +51,6 @@ public class HalfElf extends BaseRace {
 
     public ArrayList<String> getAllAttributes(){
         ArrayList<String> attributes = new ArrayList<String>();
-        attributes.add(getName());
         attributes.add(getRace());
         attributes.add(String.valueOf(getStrength()));
         attributes.add(String.valueOf(getDexterity()));

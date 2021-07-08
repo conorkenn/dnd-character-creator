@@ -11,9 +11,9 @@ public class Halfling extends BaseRace{
     private String racialBonus[] = {"Lucky", "Brave", "Halfling Nimbleness"};
     private String[] subRacialBonus ={""};
 
-    public Halfling(String name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+    public Halfling( int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
         //+2 dexterity from racial stat bonus
-        super(name, strength, dexterity + 2, constitution, intelligence, wisdom, charisma);
+        super( strength, dexterity + 2, constitution, intelligence, wisdom, charisma);
     }
 
     @Override
@@ -47,7 +47,6 @@ public class Halfling extends BaseRace{
 
     public ArrayList<String> getAllAttributes(){
         ArrayList<String> attributes = new ArrayList<String>();
-        attributes.add(getName());
         attributes.add(getRace());
         attributes.add(String.valueOf(getStrength()));
         attributes.add(String.valueOf(getDexterity()));

@@ -4,9 +4,9 @@ public class ForestGnome extends Gnome{
     private String[] racialBonus = {"Natural Illusionist", "Speaking with Small Beasts"};
 
 
-    public ForestGnome(String name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
+    public ForestGnome( int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
         //+1 dexterity from racial stat bonus
-        super(name, strength, dexterity + 1, constitution, intelligence, wisdom, charisma);
+        super( strength, dexterity + 1, constitution, intelligence, wisdom, charisma);
     }
 
     @Override
