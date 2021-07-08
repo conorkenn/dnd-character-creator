@@ -3,19 +3,18 @@ package dnd.classes;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Monk implements BaseClass{
+public class Warlock implements BaseClass{
 
-    private String className = "Monk";
+    private String className = "Warlock";
     private int hitDie = 8;
     private String getHitDice = "1d8";
-    private String savingThrows[] = {"Strength", "Dexterity"};
-    private String skills[] = {"Acrobatics", "Athletics", "History", "Insight", "Stealth"};
-    private String features[] = {"Unarmored Defense", "Martial Arts"};
-    private String firstEquipmentChoice[] = {"A shortsword", "Any simple weapon"};
-    private String secondEquipmentChoice[] = {"A dungeoneer's pack", "A explorer's pack"};
-    private String guaranteedEquipment[] = {"10 Darts"};
-
-
+    private String savingThrows[] = {"Wisdom", "Charisma"};
+    private String skills[] = {"Arcana", "Deception", "Intimidation", "Investigation", "Nature", "Religion"};
+    private String features[] = {"Otherworldly Patron", "Pact Magic"};
+    private String firstEquipmentChoice[] = {"A light crossbow and 20 bolts", "Any simple weapon"};
+    private String secondEquipmentChoice[] = {"A component pouch", "An arcane focus"};
+    private String thirdEquipmentChoice[] = {"A scholar's pack", "A explorer's pack"};
+    private String guaranteedEquipment[] = {"Leather armor", "Any simple weapon", "Two daggers"};
 
 
     public String getClassName() {
@@ -59,7 +58,7 @@ public class Monk implements BaseClass{
     }
 
     public String[] getThirdEquipmentChoice() {
-        return null;
+        return thirdEquipmentChoice;
     }
 
     public String[] getFourthEquipmentChoice() {
@@ -82,8 +81,10 @@ public class Monk implements BaseClass{
         f.add(Arrays.toString(getFeatures()));
         f.add(Arrays.toString(getFirstEquipmentChoice()));
         f.add(Arrays.toString(getSecondEquipmentChoice()));
+        f.add(Arrays.toString(getThirdEquipmentChoice()));
         f.add(Arrays.toString(getGuaranteedEquipment()));
 
         return f;
     }
+
 }

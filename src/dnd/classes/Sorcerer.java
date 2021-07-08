@@ -3,19 +3,18 @@ package dnd.classes;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Monk implements BaseClass{
+public class Sorcerer implements BaseClass{
 
-    private String className = "Monk";
-    private int hitDie = 8;
-    private String getHitDice = "1d8";
-    private String savingThrows[] = {"Strength", "Dexterity"};
-    private String skills[] = {"Acrobatics", "Athletics", "History", "Insight", "Stealth"};
-    private String features[] = {"Unarmored Defense", "Martial Arts"};
-    private String firstEquipmentChoice[] = {"A shortsword", "Any simple weapon"};
-    private String secondEquipmentChoice[] = {"A dungeoneer's pack", "A explorer's pack"};
-    private String guaranteedEquipment[] = {"10 Darts"};
-
-
+    private String className = "Sorcerer";
+    private int hitDie = 6;
+    private String getHitDice = "1d6";
+    private String savingThrows[] = {"Constitution", "Charisma"};
+    private String skills[] = {"Arcana", "Deception", "Insight", "Intimidation", "Persuasion", "Religion"};
+    private String features[] = {"Spellcasting", "Sorcerous Origin"};
+    private String firstEquipmentChoice[] = {"A light crowssbow and 20 bolts", "Any simple weapon"};
+    private String secondEquipmentChoice[] = {"A component pouch", "An arcane focus"};
+    private String thirdEquipmentChoice[] = {"A dungeoneer's pack", "A explorer's pack"};
+    private String guaranteedEquipment[] = {"Two daggers"};
 
 
     public String getClassName() {
@@ -31,7 +30,7 @@ public class Monk implements BaseClass{
     }
 
     public int getHitPoints(int constitution) {
-        return 8 + constitution;
+        return 12 + constitution;
     }
 
     public String[] getSavingThrows() {
@@ -59,7 +58,7 @@ public class Monk implements BaseClass{
     }
 
     public String[] getThirdEquipmentChoice() {
-        return null;
+        return thirdEquipmentChoice;
     }
 
     public String[] getFourthEquipmentChoice() {
@@ -82,8 +81,10 @@ public class Monk implements BaseClass{
         f.add(Arrays.toString(getFeatures()));
         f.add(Arrays.toString(getFirstEquipmentChoice()));
         f.add(Arrays.toString(getSecondEquipmentChoice()));
+        f.add(Arrays.toString(getThirdEquipmentChoice()));
         f.add(Arrays.toString(getGuaranteedEquipment()));
 
         return f;
     }
+
 }
