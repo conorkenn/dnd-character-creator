@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Human extends BaseRace{
-    private int speed = 30;
-    private String size = "Medium";
-    private String languages[] = {"Common"};
-    private String racialBonus[] = {""};
-    private String[] subRacialBonus ={""};
+    private final int speed = 30;
+    private final String size = "Medium";
+    private final String[] languages = {"Common"};
+    private final String[] racialBonus = {""};
+    private final String[] subRacialBonus ={""};
 
     public Human( int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
         //+1 to each stat from racial bonus
@@ -45,7 +45,7 @@ public class Human extends BaseRace{
     }
 
     public ArrayList<String> getAllAttributes(){
-        ArrayList<String> attributes = new ArrayList<String>();
+        ArrayList<String> attributes = new ArrayList<>();
         attributes.add(getRace());
         attributes.add(String.valueOf(getStrength()));
         attributes.add(String.valueOf(getDexterity()));

@@ -2,7 +2,7 @@ package dnd.races;
 
 public class HillDwarf extends Dwarf{
 
-    private String[] racialBonus = {"Dwarven Toughness"};
+    private final String[] racialBonus = new String[]{"Dwarven Toughness"};
 
     public HillDwarf( int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma) {
         //+1 to wisdom from racial stat bonus
