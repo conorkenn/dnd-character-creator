@@ -8,7 +8,7 @@ public class Acolyte implements Background{
 
     @Override
     public String getBackgroundName() {
-        return null;
+        return backgroundName;
     }
 
     @Override
