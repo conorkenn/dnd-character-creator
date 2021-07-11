@@ -1,43 +1,62 @@
 package dnd.Background;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Sage implements Background{
+    private String backgroundName = "Sage";
+    private String skillProficiencies[] = {};
+    private String equipment[] = {};
+    private String personalityTraits[] = {};
+    private String ideals[] = {};
+    private String bonds[] = {};
+    private String flaws[] = {};
+
     @Override
     public String getBackgroundName() {
-        return null;
+        return backgroundName;
     }
 
     @Override
     public String[] getSkillProficiencies() {
-        return new String[0];
+        return skillProficiencies;
     }
 
     @Override
     public String[] getEquipment() {
-        return new String[0];
-    }
-
-    @Override
-    public String[] getFeatures() {
-        return new String[0];
+        return equipment;
     }
 
     @Override
     public String[] getPersonalityTraits() {
-        return new String[0];
+        return personalityTraits;
     }
 
     @Override
     public String[] getIdeals() {
-        return new String[0];
+        return ideals;
     }
 
     @Override
     public String[] getBonds() {
-        return new String[0];
+        return bonds;
     }
 
     @Override
     public String[] getFlaws() {
-        return new String[0];
+        return flaws;
+    }
+
+    @Override
+    public ArrayList<String> getAllFeatures() {
+        ArrayList<String> f = new ArrayList<String>();
+        f.add(getBackgroundName());
+        f.add(Arrays.toString(getSkillProficiencies()));
+        f.add(Arrays.toString(getEquipment()));
+        f.add(Arrays.toString(getPersonalityTraits()));
+        f.add(Arrays.toString(getIdeals()));
+        f.add(Arrays.toString(getBonds()));
+        f.add(Arrays.toString(getFlaws()));
+        return f;
     }
 }

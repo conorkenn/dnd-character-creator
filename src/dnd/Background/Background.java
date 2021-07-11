@@ -1,13 +1,14 @@
 package dnd.Background;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public interface Background {
-
+    //TODO add languages
     String getBackgroundName();
     String[] getSkillProficiencies();
+    String[] getToolProficiencies();
     String[] getEquipment();
-    String[] getFeatures();
+    ArrayList<String> getAllFeatures();
     String[] getPersonalityTraits();
     String[] getIdeals();
     String[] getBonds();
