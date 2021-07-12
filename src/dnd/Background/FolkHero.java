@@ -24,9 +24,26 @@ public class FolkHero implements Background{
                                           "Thinking is for other people. I prefer action",
                                           "I misuse long words in an attempt to sound smarter",
                                           "I get bored easily. When am I going to get on with my destiny" };
-    private String ideals[] = {"" };
-    private String bonds[] = {""};
-    private String flaws[] = {""  };
+    private String ideals[] = {"Respect, People deserve to be treated with dignity and respect. (Good)",
+                               "Fairness, No one should get preferential treatment before the law, and no one  is above the law. (Lawful)",
+                               "Freedom, Tyrants must not be allowed to oppress the people. (Chaotic)",
+                               "Might, If I become strong. I can take what I want - what I deserve. (Evil)",
+                               "Sincerity, There's no good in pretending to be something I am not. (Neutral)",
+                               "Destiny, Nothing and no one can steer me away from my higher calling. (Any)" };
+
+    private String bonds[] = {"I have a family, but I have no idea where they are. One day, I hope to see them again.",
+                              "I worked the land, I love the land, and I will protect the land.",
+                              "A proud noble once gave me a horrible beating, and I will take my revenge on any bully I encounter.",
+                              "My tools are symbols of my past life, and I carry them so that I will never forget my roots.",
+                              "I protect those who cannot protect themselves.",
+                              "I wish my childhood sweetheart had come with me to pursue my destiny." };
+    private String flaws[] = {"The tyrant who rules my land will stop at nothing to see me killed.",
+                              "I'm convinced of the significance of my destiny, and blind to my shortcomings and the rick of failure.",
+                              "The people who knew me when I was young know my shameful secret, so I can never go home again.",
+                              "I have a weakness for the vices of the city, especially hard drink.",
+                              "Secretly, I believe that things would be better if I were a tyrant lording over the land.",
+                              "I have trouble trusting in my allies."  };
+
 
     @Override
     public String getBackgroundName() {
@@ -46,6 +63,10 @@ public class FolkHero implements Background{
     @Override
     public String[] getEquipment() {
         return equipment;
+    }
+
+    public String[] getDefiningEvents(){
+        return definingEvents;
     }
 
 
@@ -75,7 +96,9 @@ public class FolkHero implements Background{
         ArrayList<String> f = new ArrayList<String>();
         f.add(getBackgroundName());
         f.add(Arrays.toString(getSkillProficiencies()));
+        f.add(Arrays.toString(getToolProficiencies()));
         f.add(Arrays.toString(getEquipment()));
+        f.add(Arrays.toString(getDefiningEvents()));
         f.add(Arrays.toString(getPersonalityTraits()));
         f.add(Arrays.toString(getIdeals()));
         f.add(Arrays.toString(getBonds()));

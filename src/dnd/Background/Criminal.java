@@ -85,6 +85,7 @@ public class Criminal implements Background{
         ArrayList<String> f = new ArrayList<String>();
         f.add(getBackgroundName());
         f.add(Arrays.toString(getSkillProficiencies()));
+        f.add(Arrays.toString(getToolProficiencies()));
         f.add(Arrays.toString(getEquipment()));
         f.add(Arrays.toString(getSpecialties()));
         f.add(Arrays.toString(getPersonalityTraits()));
