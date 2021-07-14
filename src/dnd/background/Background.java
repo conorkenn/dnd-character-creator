@@ -1,4 +1,4 @@
-package dnd.Background;
+package dnd.background;
 
 import java.util.ArrayList;
 
