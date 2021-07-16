@@ -63,8 +63,7 @@ public class Acolyte implements Background{
         return personalityTraits;
     }
 
-    //todo: should only return 1 ideal, bond, flaw based on roll.
-    // Will implement later once I have all data entered
+
     @Override
     public String[] getIdeals() {
         return ideals;
